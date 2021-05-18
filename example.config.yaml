@@ -1,0 +1,12 @@
+# YOU MUST SPECIFY KV_VIPER_FILE
+# export KV_VIPER_FILE=./example.config.yaml
+
+log:
+  level: info
+  disable_sentry: true
+
+server:
+  ip: 127.0.0.1
+  port: 7778
+#listener:
+#  addr: :5101 # address on which service will work
