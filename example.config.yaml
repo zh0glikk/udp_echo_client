@@ -7,6 +7,6 @@ log:
 
 server:
   ip: 127.0.0.1
-  port: 7778
+  port: 8285
 #listener:
 #  addr: :5101 # address on which service will work
