@@ -33,8 +33,18 @@ func (s *service) Run(ctx context.Context) error{
 
 		fmt.Fprintf(conn, text + "\n")
 
-		message, _ := bufio.NewReader(conn).ReadString('\n')
-		fmt.Print("Message from server: "+message)
+		scanner := bufio.NewScanner(conn)
+
+		fmt.Println("Received message: ")
+		for scanner.Scan() {
+			line := scanner.Text()
+
+			if len(line) == 0 {
+				break
+			}
+
+			fmt.Println(line)
+		}
 	}
 
 	return nil
